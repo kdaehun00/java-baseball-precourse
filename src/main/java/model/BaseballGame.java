@@ -1,5 +1,7 @@
 package model;
 
+import view.InputView;
+
 import java.util.*;
 
 public class BaseballGame {
@@ -23,6 +25,10 @@ public class BaseballGame {
 
     private void playSingleGame() {
         List<Integer> targetNum = generateComputerNumber();
+
+        while (true) {
+            String userInput = inputView.readGuess();
+        }
     }
 
     private List<Integer> generateComputerNumber() {
