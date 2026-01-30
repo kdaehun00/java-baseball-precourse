@@ -28,6 +28,8 @@ public class BaseballGame {
     private void playSingleGame() {
         ComputerNumber targetNum = ComputerNumber.createRandom();
 
+        outputView.printStartMessage();
+
         while (true) {
             try {
                 String raw = inputView.readGuess();
