@@ -1,6 +1,6 @@
 package model;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 public final class ComputerNumber {
     private static final Random RANDOM = new Random();
     private final List<Integer> digits;
