@@ -40,4 +40,8 @@ public class UserGuess {
 
         return new UserGuess(digits);
     }
+
+    public int digitAt(int index) {
+        return digits.get(index);
+    }
 }

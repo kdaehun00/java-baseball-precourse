@@ -25,7 +25,7 @@ public class BaseballGame {
     }
 
     private void playSingleGame() {
-        List<Integer> targetNum = generateComputerNumber();
+        ComputerNumber targetNum = ComputerNumber.createRandom();
 
         while (true) {
             try {
