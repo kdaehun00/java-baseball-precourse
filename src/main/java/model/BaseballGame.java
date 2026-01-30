@@ -1,5 +1,6 @@
 package model;
 
+import exception.InvalidInputException;
 import view.InputView;
 import view.OutputView;
 

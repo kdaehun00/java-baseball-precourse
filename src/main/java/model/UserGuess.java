@@ -1,5 +1,6 @@
 package model;
 
+import exception.InvalidInputException;
 import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;
