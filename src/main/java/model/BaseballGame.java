@@ -56,4 +56,17 @@ public class BaseballGame {
         return new ArrayList<>(setNum);
     }
 
+
+    private boolean askRestart() {
+        while (true) {
+            try {
+                String cmd = inputView.readRestartCommand();
+                validateRestartCommand(cmd);
+
+                return "1".equals(cmd);
+            } catch (InvalidInputException e) {
+                outputView.printError(e.getMessage());
+            }
+        }
+    }
 }
