@@ -1,12 +1,13 @@
 package model;
 
 import view.InputView;
+import view.OutputView;
 
 import java.util.*;
 
 public class BaseballGame {
     private final InputView inputView = new InputView();
-    private final OutPutView outPutView = new OutputView();
+    private final OutputView outputView = new OutputView();
     private final Random random = new Random();
 
     public void run() {
@@ -27,7 +28,21 @@ public class BaseballGame {
         List<Integer> targetNum = generateComputerNumber();
 
         while (true) {
-            String userInput = inputView.readGuess();
+            try {
+                String raw = inputView.readGuess();
+                UserGuess guess = UserGuess.from(raw);
+
+                Result result = Judge.judge(targetNum, guess);
+                outputView.printHint(result);
+
+                if (result.isTreeStrike()) {
+                    outputView.printGameEndmessage();
+                    break;
+                }
+            } catch (InvalidInputException e) {
+                outputView.printError(e.getMessage());
+            }
+
         }
     }
 
