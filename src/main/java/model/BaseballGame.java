@@ -38,8 +38,8 @@ public class BaseballGame {
                 Result result = Judge.judge(targetNum, guess);
                 outputView.printHint(result);
 
-                if (result.isTreeStrike()) {
-                    outputView.printGameEndmessage();
+                if (result.isThreeStrike()) {
+                    outputView.printGameEndMessage();
                     break;
                 }
             } catch (InvalidInputException e) {
