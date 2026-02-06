@@ -1,5 +1,6 @@
 package model;
 
+import exception.CommonErrorCode;
 import exception.InvalidInputException;
 import lombok.AllArgsConstructor;
 
@@ -14,10 +15,10 @@ public class UserGuess {
 
     public static UserGuess from(String input) {
         if (input == null) {
-            throw new InvalidInputException("입력값이 비어있습니다.");
+            throw new InvalidInputException(CommonErrorCode.EMPTY_INPUT);
         }
         if (input.length() != 3) {
-            throw new InvalidInputException("3자리 숫자를 입력해야 합니다.");
+            throw new InvalidInputException(CommonErrorCode.INVALID_LENGTH);
         }
 
         List<Integer> digits = new ArrayList<>(3);
@@ -26,15 +27,15 @@ public class UserGuess {
         for (int i = 0; i < 3; i++) {
             char c = input.charAt(i);
             if (!Character.isDigit(c)) {
-                throw new InvalidInputException("숫자만 입력해야 합니다.");
+                throw new InvalidInputException(CommonErrorCode.NOT_A_NUMBER);
             }
 
             int d = c - '0';
             if (d < 1 || d > 9) {
-                throw new InvalidInputException("각 자리는 1~9 사이여야 합니다.");
+                throw new InvalidInputException(CommonErrorCode.NUMBER_OUT_OF_RANGE);
             }
             if (!dupCheck.add(d)) {
-                throw new InvalidInputException("중복되지 않는 숫자 3개여야 합니다.");
+                throw new InvalidInputException(CommonErrorCode.DUPLICATED_NUMBER);
             }
             digits.add(d);
         }

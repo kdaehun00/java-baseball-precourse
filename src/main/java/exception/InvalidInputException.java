@@ -1,7 +1,13 @@
 package exception;
 
+import lombok.Getter;
+
+@Getter
 public class InvalidInputException extends IllegalArgumentException {
-    public InvalidInputException(String message) {
-        super(message);
+    private final CommonErrorCode commonErrorCode;
+
+    public InvalidInputException(CommonErrorCode commonErrorCode) {
+        super(commonErrorCode.getMessage());
+        this.commonErrorCode = commonErrorCode;
     }
 }

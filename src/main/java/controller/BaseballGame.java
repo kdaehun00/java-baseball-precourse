@@ -1,5 +1,6 @@
 package controller;
 
+import exception.CommonErrorCode;
 import exception.InvalidInputException;
 import lombok.RequiredArgsConstructor;
 import model.ComputerNumber;
@@ -64,7 +65,7 @@ public class BaseballGame {
 
     private void validateRestartCommand(String cmd) {
         if (!"1".equals(cmd) && !"2".equals(cmd)) {
-            throw new InvalidInputException("1 또는 2를 입력해야 합니다.");
+            throw new InvalidInputException(CommonErrorCode.INVALID_COMMAND);
         }
     }
 }
