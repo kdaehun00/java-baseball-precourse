@@ -42,3 +42,6 @@
 - 재시작/종료 입력값이 잘못된 경우에도 예외 처리한다.
 - [ERROR]로 시작하는 메시지를 출력한다.
 - 다시 입력을 받는다.
+
+## UML
+<img width="450" height="752" alt="Image" src="https://github.com/user-attachments/assets/7bcdc840-fd2d-43ec-9042-f14188f5df25" />
