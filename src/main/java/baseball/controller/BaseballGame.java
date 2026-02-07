@@ -10,10 +10,13 @@ import baseball.model.UserGuess;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 
+import java.util.function.Supplier;
+
 @RequiredArgsConstructor
 public class BaseballGame {
     private final InputView inputView;
     private final OutputView outputView;
+    private final Supplier<ComputerNumber> computerNumberSupplier;
 
     public void run() {
         while (true) {
@@ -25,7 +28,7 @@ public class BaseballGame {
     }
 
     private void playSingleGame() {
-        ComputerNumber targetNum = ComputerNumber.createRandom();
+        ComputerNumber targetNum = computerNumberSupplier.get();
 
         outputView.printStartMessage();
 
