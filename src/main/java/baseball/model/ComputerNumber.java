@@ -33,4 +33,8 @@ public final class ComputerNumber {
     public int size() {
         return digits.size();
     }
+
+    public static ComputerNumber of(List<Integer> digits) {
+        return new ComputerNumber(digits);
+    }
 }
