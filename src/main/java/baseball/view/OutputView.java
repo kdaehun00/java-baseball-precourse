@@ -1,6 +1,6 @@
-package view;
+package baseball.view;
 
-import model.Result;
+import baseball.model.Result;
 
 public class OutputView {
     public void printStartMessage() {

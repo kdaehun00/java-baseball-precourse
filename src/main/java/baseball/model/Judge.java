@@ -1,4 +1,4 @@
-package model;
+package baseball.model;
 
 public final class Judge {
     private Judge() { }

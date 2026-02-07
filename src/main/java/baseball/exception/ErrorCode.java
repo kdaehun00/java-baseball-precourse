@@ -1,4 +1,4 @@
-package exception;
+package baseball.exception;
 
 public interface ErrorCode {
     String getCode();

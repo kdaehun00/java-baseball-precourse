@@ -1,4 +1,4 @@
-package exception;
+package baseball.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

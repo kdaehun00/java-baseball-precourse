@@ -1,4 +1,4 @@
-package model;
+package baseball.model;
 
 public record Result(int strike, int ball) {
     private static final int DIGIT_COUNT = 3;

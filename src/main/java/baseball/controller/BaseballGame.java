@@ -1,16 +1,14 @@
-package controller;
+package baseball.controller;
 
-import exception.CommonErrorCode;
-import exception.InvalidInputException;
+import baseball.exception.CommonErrorCode;
+import baseball.exception.InvalidInputException;
 import lombok.RequiredArgsConstructor;
-import model.ComputerNumber;
-import model.Judge;
-import model.Result;
-import model.UserGuess;
-import view.InputView;
-import view.OutputView;
-
-import java.util.*;
+import baseball.model.ComputerNumber;
+import baseball.model.Judge;
+import baseball.model.Result;
+import baseball.model.UserGuess;
+import baseball.view.InputView;
+import baseball.view.OutputView;
 
 @RequiredArgsConstructor
 public class BaseballGame {

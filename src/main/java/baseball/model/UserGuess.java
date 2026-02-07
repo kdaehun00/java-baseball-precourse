@@ -1,7 +1,7 @@
-package model;
+package baseball.model;
 
-import exception.CommonErrorCode;
-import exception.InvalidInputException;
+import baseball.exception.CommonErrorCode;
+import baseball.exception.InvalidInputException;
 import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;

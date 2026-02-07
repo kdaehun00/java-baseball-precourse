@@ -1,6 +1,6 @@
-import controller.BaseballGame;
-import view.InputView;
-import view.OutputView;
+import baseball.controller.BaseballGame;
+import baseball.view.InputView;
+import baseball.view.OutputView;
 
 public class Application {
 
